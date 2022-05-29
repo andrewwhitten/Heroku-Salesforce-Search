@@ -15,6 +15,15 @@ To build this you will need Heroku and Salesforce (both free signups), and your 
 
 ![1_jjEb2uUS7lM8hzyGNCC18g](https://user-images.githubusercontent.com/41508645/170855283-1ce34107-ae9c-4645-864c-007bc805fd8a.png)
 
+In the two projects provided you will find:
+
+* A custom LWC search screen in Salesforce
+* A (small) Apex class for invoking the search services
+* A custom Heroku web service created in NodeJS
+* A Postgres database hosted on Heroku
+* A Heroku Connect component to syncronize data between Salesforce and Postgres
+
+# Links
 
 * Heroku Signup: https://signup.heroku.com/
 * Salesforce Signup: https://developer.salesforce.com/signup
