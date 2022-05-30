@@ -27,3 +27,24 @@ In the two projects provided you will find:
 
 * Heroku Signup: https://signup.heroku.com/
 * Salesforce Signup: https://developer.salesforce.com/signup
+
+# Steps Overview
+
+This Proof of Concept is not intended for Production system, or systems that hold Production data. There is no security setup in this code and configuration.
+
+# Step 1: Create Heroku Connect Service
+
+In Heroku, create a free Postgres Database and Heroku Connect instance:
+
+<img width="778" alt="Screen Shot 2022-05-30 at 12 39 04 pm" src="https://user-images.githubusercontent.com/41508645/170907249-da591195-ecc2-4ffe-a5b0-55c2de1ad81a.png">
+
+Setup the Contact object mapping fields between your trial org. For this simple example I have just chosen the following fields:
+
+* CreatedDate
+* Id
+* IsDeleted
+* Name
+* SystemModstamp
+* FirstName
+* LastName
+
