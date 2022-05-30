@@ -62,5 +62,7 @@ Setup your App with the instructions defined here: https://devcenter.heroku.com/
 
 You can them put in the code defined in the Heroku directory of my respositiory.
 
+Then set up a Config Var called 'ON_HEROKU' and set the value as 1. This is to tell the App that it is deployed to Heroku rather than running locally on the developer machine.
+
 <img width="1077" alt="Screen Shot 2022-05-30 at 1 12 01 pm" src="https://user-images.githubusercontent.com/41508645/170910512-c427ba43-ef04-4a74-a996-686701a4102e.png">
 
