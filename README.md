@@ -66,3 +66,12 @@ Then set up a Config Var called 'ON_HEROKU' and set the value as 1. This is to t
 
 <img width="1077" alt="Screen Shot 2022-05-30 at 1 12 01 pm" src="https://user-images.githubusercontent.com/41508645/170910512-c427ba43-ef04-4a74-a996-686701a4102e.png">
 
+# Step 4: Test the Heroku App
+
+At this point it is worth making sure that the service is running correctly, so you can try out Postman (or similar REST testing tool) against it. Ensure there is no authorization (for this demo) and send a Raw JSON payload in the body against it: 
+
+<img width="1312" alt="Screen Shot 2022-05-30 at 1 41 05 pm" src="https://user-images.githubusercontent.com/41508645/170913253-a57052f8-1f26-454f-b930-80633df6db66.png">
+
+# Step 5: Deploy the Salesforce App
+
+In the Salesforce directory of my respository is a simple LWC Control, Apex Class and Named Credental to deploy against your Salesforce org. Add the Control to any Lightning page, and fix the URL of the named credential to your Heroku service.
