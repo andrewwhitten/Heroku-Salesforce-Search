@@ -48,3 +48,10 @@ Setup the Contact object mapping fields between your trial org. For this simple 
 * FirstName
 * LastName
 
+Note that setting up Heroku Connect will define the Postgres schema for you, with no additional configuration needed.
+
+I havn't covered indexes in this proof of concept, however you can define you own Views and Indexes afterwards.
+
+# Step 2: Create some Contacts
+
+Load up some Contacts into Salesforce with first names and last names. 
