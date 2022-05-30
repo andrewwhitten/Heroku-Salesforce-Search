@@ -50,8 +50,17 @@ Setup the Contact object mapping fields between your trial org. For this simple 
 
 Note that setting up Heroku Connect will define the Postgres schema for you, with no additional configuration needed.
 
-I havn't covered indexes in this proof of concept, however you can define you own Views and Indexes afterwards.
+I havn't covered indexes in this proof of concept since the queries won't benefit from them with the limited number of records possible in a Salesforce Developer sandbox, however you can define you own Views and Indexes afterwards.
 
 # Step 2: Create some Contacts
 
-Load up some Contacts into Salesforce with first names and last names. 
+Load up some Contacts into Salesforce with first names and last names. I downloaded a list of artists from Kaggle : https://www.kaggle.com/datasets/momanyc/museum-collection and uploaded them into Salesforce with the Salesforce Data Import Wizard.
+
+# Step 3: Setup the Heroku App
+
+Setup your App with the instructions defined here: https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+
+You can them put in the code defined in the Heroku directory of my respositiory.
+
+<img width="1077" alt="Screen Shot 2022-05-30 at 1 12 01 pm" src="https://user-images.githubusercontent.com/41508645/170910512-c427ba43-ef04-4a74-a996-686701a4102e.png">
+
