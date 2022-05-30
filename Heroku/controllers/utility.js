@@ -1,4 +1,13 @@
 /**
+ * Common utility functions used in searching
+ *
+ * Description: None
+ * 
+ * @author Andrew Whitten
+ * @date  30th May 2022
+ */
+
+/**
  * Splits a string into a first name and a last name - e.g. 'John Henry Smith'
  * becomes 'John' and 'Smith'
  * @param {*} name 

@@ -1,3 +1,11 @@
+/**
+ * LEVENSHTEIN search
+ *
+ * Description: Search using the LEVENSHTEIN SQL function : https://www.postgresql.org/docs/current/fuzzystrmatch.html
+ * 
+ * @author Andrew Whitten
+ * @date  30th May 2022
+ */
 const utility = require('./utility'); 
 
 // Postgres database connection pool

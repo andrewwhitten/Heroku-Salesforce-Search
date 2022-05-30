@@ -1,9 +1,20 @@
+/**
+ * Advanced search web services
+ *
+ * Description: Provides 4 methods to query a Postgres database that
+ * has syncronized Contacts from Salesforce (out of the box, not customized).
+ * 
+ * @author Andrew Whitten
+ * @date  30th May 2022
+ */
+
+// Modules used
 require('dotenv').config();
 const helmet = require('helmet');
 const compression = require('compression');
-
 const express = require ('express');
 
+// Setup App
 const app = express();
 app.use(helmet());
 app.use(express.json());
@@ -20,8 +31,10 @@ app.use('/', routesTrigrams);
 app.use('/', routesSoundex); 
 app.use('/', routesBasic); 
 
-app.use(compression()); //Compress all routes
+//Compress all routes
+app.use(compression()); 
 
+// Run service
 const listener = app.listen(process.env.PORT || 30001, () => {
 
     // Message to console to indicate running

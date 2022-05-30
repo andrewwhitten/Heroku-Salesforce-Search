@@ -1,5 +1,10 @@
 /**
+ * Basic search
+ *
+ * Description: Simple Postgres SQL name search
  * 
+ * @author Andrew Whitten
+ * @date  30th May 2022
  */
 const utility = require('./utility'); 
 
@@ -79,8 +84,6 @@ const newBasicSearch = (req, res, next) => {
         console.log('Search query: ' + queryString);
 
         var returnValues = [];
-
-        client.
 
         client.query(queryString, function(err, results) {
 

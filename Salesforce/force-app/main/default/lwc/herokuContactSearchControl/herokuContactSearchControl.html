@@ -1,0 +1,131 @@
+<template>
+    
+    <div class="row">
+
+        <!-- Define search control criteria -->
+        <h1 class="slds-text-heading_large">Search Criteria</h1>
+        <br/>
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <span>
+                    <lightning-input 
+                        name="inputName" 
+                        label="Contact Name:" 
+                        placeholder="type contact name here..."
+                        onchange={handleNameInputChange}
+                        variant="label-hidden">
+                    </lightning-input>
+                </span>
+            </div>
+
+            <div class="slds-col">
+                <span>
+                    <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+                </span>
+            </div>
+
+            <div class="slds-col">
+            <span>.</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <br/>
+    </div>
+
+    <div class="row">
+
+        <div class="slds-grid slds-gutters">
+
+            <!--Levenshtein Search-->
+            <div class="slds-col" style="height: 280px; width: 400px;">
+                <span>
+                    <h1 class="slds-text-heading_large">Levenshtein Search</h1>
+                    <p>This returns macthes on Levenshtein distances. Lower Score is closer match. <A href="https://en.wikipedia.org/wiki/Levenshtein_distance">LINK</A><br/><br/></p>
+                    <div>
+                        <!-- sldsValidatorIgnoreNextLine -->
+                        <lightning-datatable
+                                key-field="sfid"
+                                data={levenshteinsearchdata}
+                                columns={scoreSearchColumns}
+                                hide-checkbox-column >
+                        </lightning-datatable>
+                    </div>    
+
+                </span>
+            </div>
+
+            <!--Soundex Search-->
+            <div class="slds-col" style="height: 280px; width: 400px;">
+                <span>
+                    <h1 class="slds-text-heading_large">Soundex Search</h1>
+
+                    <p>This returns matches on the Soundex algorithm, which looks for the phonetic closest matches based on English pronounciations. <A href="https://en.wikipedia.org/wiki/Soundex">LINK</A></p>
+                    <br/>
+
+                    <div >
+                        <!-- sldsValidatorIgnoreNextLine -->
+                        <lightning-datatable
+                                key-field="sfid"
+                                data={soundexsearchdata}
+                                columns={basicsearchcolumns}
+                                hide-checkbox-column >
+                        </lightning-datatable>
+                    </div>
+                </span>
+            </div>
+
+            <!--Trigrams Search-->
+            <div class="slds-col" style="height: 280px; width: 400px;">
+                <span>
+                    <h1 class="slds-text-heading_large">Trigrams Search</h1>
+                    <p>An algorithm that compares groups of three consecutive characters. Higher score is a closer match. <a href="https://www.postgresql.org/docs/14/pgtrgm.html">LINK</a><br/><br/></p>
+
+                    <div>
+                        <!-- sldsValidatorIgnoreNextLine -->
+                        <lightning-datatable
+                                key-field="sfid"
+                                data={trigramssearchdata}
+                                columns={scoreSearchColumns}
+                                hide-checkbox-column >
+                        </lightning-datatable>
+                    </div>    
+
+                </span>
+            </div>
+
+        </div>  
+
+    </div>
+
+    <div class="row">
+
+        <br/>
+    </div>
+
+    <!-- Basic Search - Leave out for demo-->
+    <!--
+    <div class="row">
+
+        <div class="slds-col">
+            <span>
+                <h1 class="slds-text-heading_large">Basic Search</h1>
+
+                <p>This returns exact matches. Nothing special.<br/><br/></p>
+                <div style="height: 280px; width: 600px;">
+                    <lightning-datatable
+                            key-field="sfid"
+                            data={basicsearchdata}
+                            columns={basicsearchcolumns}
+                            hide-checkbox-column >
+                    </lightning-datatable>
+                </div>
+            </span>
+        </div>
+
+    </div> -->
+
+</template>

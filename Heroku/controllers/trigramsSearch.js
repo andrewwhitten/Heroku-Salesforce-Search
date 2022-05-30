@@ -1,3 +1,11 @@
+/**
+ * Trigrams search
+ *
+ * Description: Search using the Similarity SQL function : https://www.postgresql.org/docs/current/pgtrgm.html
+ * 
+ * @author Andrew Whitten
+ * @date  30th May 2022
+ */
 const utility = require('./utility'); 
 
 // Postgres database connection pool
