@@ -53,7 +53,7 @@ Setup the Contact object mapping fields between your trial org. For this simple 
 
 Heroku Connect should have done this for you in the previous step. All that is left to do is ensure the 'fuzzy search' extension is enabled afterwards:
 
-'''CREATE EXTENSION pg_trgm;'''
+```CREATE EXTENSION pg_trgm;```
 
 Note that setting up Heroku Connect will define the Postgres schema for you, with no additional configuration needed.
 
