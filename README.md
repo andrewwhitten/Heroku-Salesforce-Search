@@ -27,6 +27,7 @@ All tools are free as well:
 * Visual Studio Code: https://code.visualstudio.com/
 * Salesforce SFDX: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_sfdx
 * Heroku NodeJS SDK: https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+* Postman (or any other REST testing tool: https://www.postman.com/downloads/
 
 # Steps Overview
 
@@ -76,7 +77,7 @@ Then set up a Config Var called 'ON_HEROKU' and set the value as 1. This is to t
 
 # Step 4: Test the Heroku App
 
-At this point it is worth making sure that the service is running correctly, so you can try out Postman (or similar REST testing tool) against it. Ensure there is no authorization (for this demo) and send a Raw JSON payload in the body against it: 
+At this point it is worth making sure that the service is running correctly, so you can try out Postman (or similar REST testing tool) against it. Ensure there is no authorization (for this demo) and send a raw JSON payload in the body against it: 
 
 <img width="1312" alt="Screen Shot 2022-05-30 at 1 41 05 pm" src="https://user-images.githubusercontent.com/41508645/170913253-a57052f8-1f26-454f-b930-80633df6db66.png">
 
