@@ -15,22 +15,22 @@ To build this you will need Heroku and Salesforce (both free signups), and your 
 
 ![1_jjEb2uUS7lM8hzyGNCC18g](https://user-images.githubusercontent.com/41508645/170855283-1ce34107-ae9c-4645-864c-007bc805fd8a.png)
 
-In the two projects provided you will find:
+# Prerequisites
 
-* A custom LWC search screen in Salesforce
-* A (small) Apex class for invoking the search services
-* A custom Heroku web service created in NodeJS
-* A Postgres database hosted on Heroku
-* A Heroku Connect component to syncronize data between Salesforce and Postgres
-
-# Links
+All environments for the demonstration is available for a free trial:
 
 * Heroku Signup: https://signup.heroku.com/
 * Salesforce Signup: https://developer.salesforce.com/signup
 
+All tools are free as well:
+
+* Visual Studio Code: https://code.visualstudio.com/
+* Salesforce SFDX: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_sfdx
+* Heroku NodeJS SDK: https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+
 # Steps Overview
 
-This Proof of Concept is not intended for Production system, or systems that hold Production data. There is no security setup in this code and configuration.
+**This Proof of Concept is not intended for Production systems, or systems that hold Production data.** There is no security setup in this code and configuration.
 
 # Step 1: Create Heroku Connect Service
 
@@ -50,7 +50,7 @@ Setup the Contact object mapping fields between your trial org. For this simple 
 
 Note that setting up Heroku Connect will define the Postgres schema for you, with no additional configuration needed.
 
-I havn't covered indexes in this proof of concept since the queries won't benefit from them with the limited number of records possible in a Salesforce Developer sandbox, however you can define you own Views and Indexes afterwards.
+I havn't covered indexes in this proof of concept since the queries won't benefit from them with the limited number of records possible in a Salesforce Developer sandbox, however you can define you own Views and Indexes afterwards. In a system with millions of records you will likely benefit from an indexing strategy.
 
 # Step 2: Create some Contacts
 
@@ -72,6 +72,17 @@ At this point it is worth making sure that the service is running correctly, so 
 
 <img width="1312" alt="Screen Shot 2022-05-30 at 1 41 05 pm" src="https://user-images.githubusercontent.com/41508645/170913253-a57052f8-1f26-454f-b930-80633df6db66.png">
 
+You will have four services to try out:
+
+* https://your-own-deployed-search-this-is-not-real.herokuapp.com/levenshteinSearch
+* https://your-own-deployed-search-this-is-not-real.herokuapp.com/trigramsSearch
+* https://your-own-deployed-search-this-is-not-real.herokuapp.com/soundexSearch
+* https://your-own-deployed-search-this-is-not-real.herokuapp.com/basicSearch
+
+(You can skip this part, but then you won't be sure if it is working if it doesn't working in Salesforce)
+
 # Step 5: Deploy the Salesforce App
 
-In the Salesforce directory of my respository is a simple LWC Control, Apex Class and Named Credental to deploy against your Salesforce org. Add the Control to any Lightning page, and fix the URL of the named credential to your Heroku service.
+In the Salesforce directory of my respository is a simple LWC Control, Apex Class and Named Credental to deploy against your Salesforce org. 
+
+Add the Control to any Lightning page, and fix the URL of the named credential to your Heroku service. You should be good to try out the searching as a Salesforce user now!
