@@ -49,15 +49,21 @@ Setup the Contact object mapping fields between your trial org. For this simple 
 * FirstName
 * LastName
 
+# Step 2: Setting up the Postgres database
+
+Heroku Connect should have done this for you in the previous step. All that is left to do is ensure the 'fuzzy search' extension is enabled afterwards:
+
+'''CREATE EXTENSION pg_trgm;'''
+
 Note that setting up Heroku Connect will define the Postgres schema for you, with no additional configuration needed.
 
 I havn't covered indexes in this proof of concept since the queries won't benefit from them with the limited number of records possible in a Salesforce Developer sandbox, however you can define you own Views and Indexes afterwards. In a system with millions of records you will likely benefit from an indexing strategy.
 
-# Step 2: Create some Contacts
+# Step 3: Create some Contacts
 
 Load up some Contacts into Salesforce with first names and last names. I downloaded a list of artists from Kaggle : https://www.kaggle.com/datasets/momanyc/museum-collection and uploaded them into Salesforce with the Salesforce Data Import Wizard.
 
-# Step 3: Setup the Heroku App
+# Step 4: Setup the Heroku App
 
 Setup your App with the instructions defined here: https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
 
@@ -75,7 +81,7 @@ Then set up a Config Var called 'ON_HEROKU' and set the value as 1. This is to t
 
 <img width="1077" alt="Screen Shot 2022-05-30 at 1 12 01 pm" src="https://user-images.githubusercontent.com/41508645/170910512-c427ba43-ef04-4a74-a996-686701a4102e.png">
 
-# Step 4: Test the Heroku App
+# Step 5: Test the Heroku App
 
 At this point it is worth making sure that the service is running correctly, so you can try out Postman (or similar REST testing tool) against it. Ensure there is no authorization (for this demo) and send a raw JSON payload in the body against it: 
 
@@ -90,7 +96,7 @@ You will have four services to try out:
 
 (You can skip this part, but then you won't be sure if it is working if it doesn't working in Salesforce)
 
-# Step 5: Deploy the Salesforce App
+# Step 6: Deploy the Salesforce App
 
 In the Salesforce directory of my respository is a simple LWC Control, Apex Class and Named Credental to deploy against your Salesforce org. 
 
