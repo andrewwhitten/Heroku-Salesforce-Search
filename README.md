@@ -32,7 +32,7 @@ All tools are free as well:
 
 **This Proof of Concept is not intended for Production systems, or systems that hold Production data.** There is no security setup in this code and configuration.
 
-# Step 1: Create Heroku Connect Service
+# Step 1: Create the Heroku Connect Service
 
 In Heroku, create a free Postgres Database and Heroku Connect instance:
 
@@ -59,6 +59,14 @@ Load up some Contacts into Salesforce with first names and last names. I downloa
 # Step 3: Setup the Heroku App
 
 Setup your App with the instructions defined here: https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+
+Install the following dependencies with the npm install command:
+
+* npm install compression
+* npm install dotenv
+* npm install express
+* npm install helmet
+* npm install pg
 
 You can them put in the code defined in the Heroku directory of my respositiory.
 
