@@ -1,5 +1,7 @@
 # Heroku-Salesforce-Search
 
+<b>This project is now a few years old, and I'm unlikekly to revisit it. Do feel free to branch it off if you are interested to take it further.</B>
+
 Salesforce has some good mechanisms for querying data, however limitations of the platform become apparent when you have:
 
 * SOQL Query joins across multiple large objects
