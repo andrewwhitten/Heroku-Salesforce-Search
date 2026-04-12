@@ -1,6 +1,6 @@
 # Heroku-Salesforce-Search
 
-<b>This project is now a few years old, and I'm unlikely to revisit it. Do feel free to branch it off if you are interested to take it further.</B>
+<b>This project is now a few years old, and I'm unlikely to revisit it. Heroku itself appears to be on the path to being phased out https://www.heroku.com/blog/category/news/ . I would suggest that today you are probably better off looking at Salesforce Data Cloud, or potentially off-platform cabilities on AWS, Azure or GCP</B>
 
 Salesforce has some good mechanisms for querying data, however limitations of the platform become apparent when you have:
 
